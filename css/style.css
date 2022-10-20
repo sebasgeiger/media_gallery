@@ -1,18 +1,19 @@
 :root {/*-- sets color variables --*/
-  --dark: #444;
-  --ltmid: #DDD;
-  --dkmid: #999;
-  --light: #F9F9F9;
+  --dark:  #0d4874;
+  --ltmid: #63b5d5;
+  --dkmid: #16567c;
+  --light: #e3eaef;
   --accent: #6495ed;
 }
 body {
   color: var(--dark); /*-- sets body default font color --*/
   line-height: 1.4; /*-- sets body default line height --*/
+  background-image: url("../img/sand.jpg");
 }
 /*-- default styles for links (in the correct order) --*/
 a {color: var(--accent); font-weight: 500; text-decoration: none; transition: all .2s ease-in-out;}
 a:visited {color:#305eb3;}
-a:hover {color: var(--accent);}
+a:hover {color: var(--light);}
 a:active {color: var(--dkmid);}
 
 nav { /*-- main nav styles --*/
@@ -22,6 +23,7 @@ nav { /*-- main nav styles --*/
   min-height: 6rem; /*-- nav has a minimum height --*/
   justify-content: space-between; /*-- excess space is distributed between flex children along the main axis --*/
   align-items: center; /*-- flex children are centered on the cross axis  --*/
+  border-bottom: 0.25rem solid var(--light);
 }
 nav a { /*-- targets the nav links --*/
   padding-left: 1.5rem; /*-- keeps links separated --*/
@@ -31,7 +33,7 @@ nav a { /*-- targets the nav links --*/
   transition: all .2s ease-in-out; /*-- gives a transition for hover effects --*/
 }
 nav a:hover { /*-- nav links on hover --*/
-  color: var(--accent); /*-- changes link color on hover --*/
+  color: var(--light); /*-- changes link color on hover --*/
 }
 a.logo { /*-- nav link with .logo class --*/
   flex-basis: 67%; /*-- makes the logo link take up most of the horizontal space --*/
@@ -90,6 +92,8 @@ main {
   background-color: var(--ltmid); /*-- light color --*/
   width: 100vw; /*-- extra wide --*/
   margin: 2rem 0 1rem -2rem; /*-- negative right margin compensates for extra width --*/
+  border-top: 0.25rem solid var(--light);
+  border-bottom: 0.25rem solid var(--light);
 }
 .hero > * { /*-- targets all direct children of .hero --*/
   margin: 0; /*-- zeroes their margins --*/
@@ -142,6 +146,7 @@ footer { /*-- just some footer styles, nothing weird --*/
   height: 6rem; /*-- fixed height  --*/
   justify-content: space-between; /*-- horizontal center --*/
   align-items: center; /*-- vertical center --*/
+  border-top: 0.25rem solid var(--light);
 }
 footer p { /*-- targets the footer text --*/
   width: 100%; /*-- p elements are full width of the container --*/
