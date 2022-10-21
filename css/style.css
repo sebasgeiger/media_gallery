@@ -53,7 +53,7 @@ main {
   justify-content: center; /*-- center in the main axis --*/
   align-items: center; /*-- center in the cross axis --*/
   height: 55rem; /*-- fixed hieght, probably delete this --*/
-  border: 2px dashed var(--dkmid); /*-- unsubtle border --*/
+  border: 2px solid var(--dkmid); /*-- unsubtle border --*/
   border-radius: 8px; /*-- rounded corners --*/
   background-color: var(--light); /*-- a bit of light background color --*/
   color: var(--dkmid); /*-- text color is mid --*/
@@ -122,7 +122,7 @@ main {
   display: flex; /*-- card is a flex container --*/
   flex-direction: column; /*-- flow is downward --*/
   border-radius: 8px; /*-- curved edges --*/
-  border: 2px dashed var(--dkmid); /*-- dashed border --*/
+  border: 2px solid var(--dkmid); /*-- dashed border --*/
   background-color: var(--light); /*-- a little bit of light color --*/
 }
 .card img { /*-- selects image children of .card --*/
@@ -137,7 +137,24 @@ main {
   margin: 2rem auto; /*-- centered it --*/
   padding: 1rem 2rem; /*-- makes space inside the button --*/
   cursor: pointer; /*-- changes the mouse cursor from arrow to pointer --*/
+  transition: all 0.5s ease-in 0s;
+  color: var(--dark);
+  background: var(--light);
 }
+.card button:hover {
+  border-radius: 60px;
+  color: var(--light);
+  background: var(--dark);
+}
+.button--dark {
+  border: 2px solid var(--dark);
+  color: var(--dark);
+}
+.button--dark {
+  border-color: var(--ltmid);
+  background: var(--dark);
+}
+
 footer { /*-- just some footer styles, nothing weird --*/
   margin-top: 2rem; /*-- adds space above --*/
   background-color: var(--ltmid); /*-- light mid color --*/
