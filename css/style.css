@@ -80,9 +80,6 @@ main {
 .controls button:nth-child(2) {
   right: 1rem; /*-- positions second arrow to the right --*/
 }
-.slideshow h2 { /*-- styles the placeholder text (probably safe to delete) --*/
-  font-size: 4rem; /*-- font is larger than normal --*/
-}
 .hero {
   padding: 4rem 0; /*-- top and bottom padding for the container --*/
   display: flex; /*-- declares a flex container --*/

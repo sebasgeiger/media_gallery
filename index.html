@@ -4,31 +4,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Starter</title>
+  <title>Media Gallery</title>
+  <script src="https://kit.fontawesome.com/b03388ca7d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/modnorm.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <nav id="site-nav" class="top-nav">
-    <a href="#" class="nav-links logo">The Heart of the Sea</a>
-    <a href="#" class="nav-links">
-      <span class="label">News</span>
-    </a>
-    <a href="#" class="nav-links">
-      <span class="label">About</span>
-    </a>
-    <a href="#" class="nav-links">
-      <span class="label">Specials</span>
-    </a>
-    <a href="#" class="nav-links">
-      <span class="label">Contact</span>
-    </a>
-    <a href="#" class="nav-links trigram">&#9776;</a>
+    <a class="nav-links logo">The Heart of the Sea</a>
+    <a class="nav-links">
+      <span class="label">News</span></a>
+    <a class="nav-links">
+      <span class="label">About</span></a>
+    <a class="nav-links">
+      <span class="label">Specials</span></a>
+    <a class="nav-links">
+      <span class="label">Contact</span></a>
+    <a href="javascrit:void(0);" onclick="navToggle()">&#9776;</a>
   </nav>
   <main>
     <section class="slideshow">
-      <!--slider goes here-->
-      <h2>slideshow here</h2>
+      <div class="slideshow-wrapper">
+        <div class="slide fade">
+          <div class="numberof">1 of 4</div>
+          <img src="https://picsum.photos/id/1052/1280/448"/>
+          <div class="captiontext">Crashing waves on the beach</div>
+        </div><!-- end .slide.fade -->
+        <div class="slide fade">
+          <div class="numberof">2 of 4</div>
+          <img src="https://picsum.photos/id/1057/1280/448"/>
+          <div class="captiontext">Beach below a cliff</div>
+        </div><!-- end .slide.fade -->
+        <div class="slide fade">
+          <div class="numberof">3 of 4</div>
+          <img src="https://picsum.photos/id/13/1280/448"/>
+          <div class="captiontext">Rocky beach with clear water</div>
+        </div><!-- end .slide.fade -->
+        <div class="slide fade">
+          <div class="numberof">4 of 4</div>
+          <img src="https://picsum.photos/id/14/1280/448"/>
+          <div class="captiontext">Rocks infront of sunset</div>
+        </div><!-- end .slide.fade -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div><!--end slideshow-wrapper-->
+      <br/>
+      <div class="text-center">
+        <span class="indicator" onclick="currentSlide(1)"><img scr="https://picsum.photos/id/1052/1280/448"/></span>
+        <span class="indicator" onclick="currentSlide(2)"><img scr="https://picsum.photos/id/1057/1280/448"/></span>
+        <span class="indicator" onclick="currentSlide(3)"><img scr="https://picsum.photos/id/13/1280/448"/></span>
+        <span class="indicator" onclick="currentSlide(4)"><img scr="https://picsum.photos/id/14/1280/448"/></span>
+      </div>
       <div class="controls">
         <button>&#8249;</button>
         <button>&#8250;</button>
