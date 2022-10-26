@@ -81,74 +81,90 @@ main {
 /*-- Styles for slideshow --*/
 .slideshow {
   background-color: var(--dkmid);
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 .slideshow-wrapper {
-  position: relative; /*-- this allows children to be position absolutely --*/
-  margin: auto; /*-- simple centering method--*/  max-width: 100%; /*-- contrains slideshow on largest screens --*/
+  position: relative; 
+  margin: auto; 
+  max-width: 100%; 
 }
 .slideshow-wrapper img {
-  width: 100%; /*-- makes slideshow responsive in size --*/
+  width: 100%; 
 }
 .prev, .next {
-  cursor: pointer; /*-- changes hover cursor to the hand --*/
-  position: absolute; /*-- positions arrows absolutely--*/
-  top: 50%; /*-- positions arrows half the height of parent from top --*/
-  width: auto; /*-- matches width of parent --*/
-  padding: 16px; /*-- adds a little bit of space--*/
-  margin-top: -22px; /*-- adjusts position by height of arrows --*/
-  color: var(--dark); /*-- sets color for contrast --*/
-  font-weight: bold; /*-- selects heavier font --*/
-  font-size: 18px; /*-- sets arrow font size --*/
-  transition: 0.6s ease; /*-- sets transition speed for arrow hover--*/
-  border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
+  cursor: pointer; 
+  position: absolute; 
+  top: 50%; 
+  width: auto; 
+  padding: 16px; 
+  margin-top: -22px; 
+  color: var(--dark);
+  font-weight: bold; 
+  font-size: 18px; 
+  transition: 0.6s ease; 
+  border-radius: 0 3px 3px 0; 
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none; /*-- prevents users from selecting buttons --*/
+  user-select: none; 
 }
 .next {
-  right: 0; /*-- positions next arrow hard right --*/
-  border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
+  right: 0; 
+  border-radius: 3px 0 0 3px; 
 }
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
+  background-color: var(--ltmid); 
 }
 .captiontext {
-  background: rgba(0,0,0,0.4); /*-- transparent black background --*/
-  color: #f2f2f2; /*-- sets color to almost white --*/
-  font-size: 22px; /*-- sets font size --*/
-  padding: 8px 12px; /*-- sets caption padding --*/
-  position: absolute; /*-- positions caption text absolutely--*/
-  bottom: 8px; /*-- sets position 8px from bottom --*/
-  width: 100%; /*-- sets width equal to container width --*/
-  text-align: center; /*-- aligns text center --*/
+  background: rgba(0,0,0,0.4); 
+  color: #f2f2f2; 
+  font-size: 22px; 
+  padding: 8px 12px; 
+  position: absolute; 
+  bottom: 8px; 
+  width: 100%; 
+  text-align: center; 
 }
 .numberof {
-  color: var(--dark); /*-- sets color to almost white --*/
-  font-size: 12px; /*-- sets font size --*/
-  padding: 8px 12px; /*-- sets numberof padding --*/
-  position: absolute; /*-- positions numberof text absolutely--*/
-  top: 0; /*-- sets position hard to the top--*/
+  color: var(--dark); 
+  font-size: 12px; 
+  padding: 8px 12px; 
+  position: absolute; 
+  top: 0; 
 }
 .text-center {
   display: flex;
 }
 .indicator {
-  cursor:pointer; /*-- changes hover cursor to the hand --*/
-  height: auto; /*-- sets height of pics --*/
-  width: 25%; /*-- sets width of pics --*/
-  margin: 0 2px; /*-- adds margin between pics --*/
-  background-color: #bbb; /*-- sets background color to light gray --*/
-  display: inline-block; /*-- displays in a horizontal line --*/
-  transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
+  cursor:pointer; 
+  height: auto; 
+  width: 25%; 
+  margin: 0 2px; 
+  background-color: #bbb; 
+  display: inline-block; 
+  transition: all 250ms ease-in-out; 
   opacity: .5;
 }
 .indicator img {
-  width: 100% !important; /*-- small images fill available space --*/
+  width: 100% !important; 
 }
 .active, .indicator:hover {
-  opacity: 1; /*-- makes fully visible when hovered  --*/
+  opacity: 1; 
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade; /*-- webkit prefix  --*/
+  -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
+  animation-name: fade; /*-- defines which animation to use --*/
+  animation-duration: 1.5s; /*-- sets the duration --*/
+}
+@-webkit-keyframes fade { /*-- webkit prefix --*/
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade { /*-- sets "fade" animation properties --*/
+  from {opacity: .4} /*-- sets start of animation --*/
+  to {opacity: 1} /*-- sets end of animation --*/
 }
 .hero {
   padding: 4rem 0; /*-- top and bottom padding for the container --*/
