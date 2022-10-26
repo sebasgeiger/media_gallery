@@ -10,18 +10,16 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav id="site-nav" class="top-nav">
-    <a class="nav-links logo">The Heart of the Sea</a>
-    <a class="nav-links">
-      <span class="label">News</span></a>
-    <a class="nav-links">
-      <span class="label">About</span></a>
-    <a class="nav-links">
-      <span class="label">Specials</span></a>
-    <a class="nav-links">
-      <span class="label">Contact</span></a>
-    <a href="javascrit:void(0);" onclick="navToggle()">&#9776;</a>
-  </nav>
+  <header class="top-nav">
+    <a href="#" class="nav-link logo">Heart&nbsp;of&nbsp;the&nbsp;Sea</a>
+    <nav id="site-nav" class="nav-wrap">
+      <a href="#" class="nav-link">News</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Specials</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+    <a href="#" class="nav-link" id="trigram" onclick="navToggle()"></a>
+  </header>
   <main>
     <section class="slideshow">
       <div class="slideshow-wrapper">
@@ -54,10 +52,6 @@
         <span class="indicator" onclick="currentSlide(2)"><img scr="https://picsum.photos/id/1057/1280/448"/></span>
         <span class="indicator" onclick="currentSlide(3)"><img scr="https://picsum.photos/id/13/1280/448"/></span>
         <span class="indicator" onclick="currentSlide(4)"><img scr="https://picsum.photos/id/14/1280/448"/></span>
-      </div>
-      <div class="controls">
-        <button>&#8249;</button>
-        <button>&#8250;</button>
       </div>
     </section>
     <section class="hero">
@@ -97,6 +91,24 @@
       </article><!--end article.card-->
       <article class="card">
         <img src="https://picsum.photos/id/124/480/320" alt="alt-text reads . . .">
+        <h4>Heading for a bit</h4>
+        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
+        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
+      </article><!--end article.card-->
+      <article class="card">
+        <img src="https://picsum.photos/id/1001/480/320" alt="alt-text reads . . .">
+        <h4>Heading for a bit</h4>
+        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
+        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
+      </article><!--end article.card-->
+      <article class="card">
+        <img src="https://picsum.photos/id/1019/480/320" alt="alt-text reads . . .">
+        <h4>Heading for a bit</h4>
+        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
+        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
+      </article><!--end article.card-->
+      <article class="card">
+        <img src="https://picsum.photos/id/130/480/320" alt="alt-text reads . . .">
         <h4>Heading for a bit</h4>
         <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
         <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->

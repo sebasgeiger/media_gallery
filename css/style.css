@@ -6,8 +6,8 @@
   --accent: #6495ed;
 }
 body {
-  color: var(--dark); /*-- sets body default font color --*/
-  line-height: 1.4; /*-- sets body default line height --*/
+  color: var(--dark); 
+  line-height: 1.4; 
   background-image: url("../img/sand.jpg");
 }
 /*-- default styles for links (in the correct order) --*/
@@ -15,70 +15,140 @@ a {color: var(--accent); font-weight: 500; text-decoration: none; transition: al
 a:visited {color:#305eb3;}
 a:hover {color: var(--light);}
 a:active {color: var(--dkmid);}
-
-nav { /*-- main nav styles --*/
-  background-color: var(--ltmid); /*-- nav background --*/
-  padding: 1rem 2rem; /*-- inside padding --*/
-  display: flex; /*-- nav is a flex container --*/
-  min-height: 6rem; /*-- nav has a minimum height --*/
-  justify-content: space-between; /*-- excess space is distributed between flex children along the main axis --*/
-  align-items: center; /*-- flex children are centered on the cross axis  --*/
-  border-bottom: 0.25rem solid var(--light);
+/*-- main nav styles --*/
+header.top-nav { 
+  background-color: var(--ltmid); 
+  padding: 1rem 2rem 1rem 0; 
+  display: flex; 
+  min-height: 8rem; 
+  justify-content: space-between; 
+  align-items: center; 
+  position: relative; 
+  border-bottom: .25rem solid var(--light);
 }
-nav a { /*-- targets the nav links --*/
-  padding-left: 1.5rem; /*-- keeps links separated --*/
-  color: var(--dark); /*-- link color --*/
-  font-weight: 500; /*-- heavier type weight --*/
-  text-decoration: none; /*-- removes default link underline --*/
-  transition: all .2s ease-in-out; /*-- gives a transition for hover effects --*/
+nav { 
+  flex-basis: 30%; 
+  display: flex; 
+  justify-content: space-between; 
 }
-nav a:hover { /*-- nav links on hover --*/
-  color: var(--light); /*-- changes link color on hover --*/
+a.nav-link { 
+  padding-left: 2.8rem; 
+  color: var(--dark); 
+  font-weight: 500; 
+  text-decoration: none; 
+  transition: all .2s ease-in-out; 
 }
-a.logo { /*-- nav link with .logo class --*/
-  flex-basis: 67%; /*-- makes the logo link take up most of the horizontal space --*/
-  text-transform: uppercase; /*-- makes logo link typographically distinct --*/
-  font-weight: 900; /*-- heaviest font weight --*/
+a.nav-link:hover {
+  color: var(--light);  
 }
-a.trigram { /*-- hamburger menu icon nav link --*/
-  display: none; /*-- hidden by default --*/
-  font-size: 3rem; /*-- makes it considerably larger --*/
-  align-self: stretch; /*-- tells it to fill the cross axis when present --*/
+a.nav-link.logo {  
+  text-transform: uppercase; 
+  font-weight: 900; 
+}
+a#trigram { 
+  display: none;  
+}
+a#trigram::before { 
+  content: '\2630'; 
+  font-size: 4rem; 
+  position: relative; 
+  top: -.5rem; 
+  right: 0; 
+}
+.nav-wrap.mobile {
+  position: absolute;
+  top: 7rem;
+  right: 0;
+  background-color: var(--ltmid);
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 1rem 2rem 1rem;
+  border-bottom: .25rem solid var(--dark);
+}
+.nav-wrap.mobile a {
+  padding-top: 1rem;
+  margin-right: 1rem;
+}
+a#trigram.tri-mobile::before {
+  content: '\00D7'
 }
 main {
-  padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
+  padding: 1rem 2rem; 
 }
-.slideshow { /*-- replace these styles with your slideshow styles --*/
-  display: flex; /*-- declares a flex container --*/
-  justify-content: center; /*-- center in the main axis --*/
-  align-items: center; /*-- center in the cross axis --*/
-  height: 55rem; /*-- fixed hieght, probably delete this --*/
-  border: 2px solid var(--dkmid); /*-- unsubtle border --*/
-  border-radius: 8px; /*-- rounded corners --*/
-  background-color: var(--light); /*-- a bit of light background color --*/
-  color: var(--dkmid); /*-- text color is mid --*/
-  position: relative; /*-- allows explicit positioning for children --*/
+/*-- Styles for slideshow --*/
+.slideshow {
+  background-color: var(--dkmid);
+  padding: 0.5rem;
 }
-.controls button { /*-- you'll probably replace all .controls styles with your own --*/
+.slideshow-wrapper {
+  position: relative; /*-- this allows children to be position absolutely --*/
+  margin: auto; /*-- simple centering method--*/  max-width: 100%; /*-- contrains slideshow on largest screens --*/
+}
+.slideshow-wrapper img {
+  width: 100%; /*-- makes slideshow responsive in size --*/
+}
+.prev, .next {
   cursor: pointer; /*-- changes hover cursor to the hand --*/
   position: absolute; /*-- positions arrows absolutely--*/
+  top: 50%; /*-- positions arrows half the height of parent from top --*/
   width: auto; /*-- matches width of parent --*/
-  top: 40%; /*-- positions arrows from parent top --*/
-  color: var(--ltmid); /*-- arrow color --*/
-  background-color: transparent; /*-- hides button background --*/
-  border: none; /*-- removes default button border --*/
-  font-weight: 800; /*-- selects heavier font --*/
-  font-size: 8rem; /*-- sets arrow font size --*/
-  transition: 0.2s ease; /*-- sets transition speed for arrow hover--*/
+  padding: 16px; /*-- adds a little bit of space--*/
+  margin-top: -22px; /*-- adjusts position by height of arrows --*/
+  color: var(--dark); /*-- sets color for contrast --*/
+  font-weight: bold; /*-- selects heavier font --*/
+  font-size: 18px; /*-- sets arrow font size --*/
+  transition: 0.6s ease; /*-- sets transition speed for arrow hover--*/
+  border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; /*-- prevents users from selecting buttons --*/
 }
-.controls button:hover {
-  color: var(--accent); /*-- changes button color on hover --*/
+.next {
+  right: 0; /*-- positions next arrow hard right --*/
+  border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
 }
-.controls button:nth-child(1) {
-  left: 1rem; /*-- positions first arrow to the left --*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
 }
-.controls button:nth-child(2) {
-  right: 1rem; /*-- positions second arrow to the right --*/
+.captiontext {
+  background: rgba(0,0,0,0.4); /*-- transparent black background --*/
+  color: #f2f2f2; /*-- sets color to almost white --*/
+  font-size: 22px; /*-- sets font size --*/
+  padding: 8px 12px; /*-- sets caption padding --*/
+  position: absolute; /*-- positions caption text absolutely--*/
+  bottom: 8px; /*-- sets position 8px from bottom --*/
+  width: 100%; /*-- sets width equal to container width --*/
+  text-align: center; /*-- aligns text center --*/
+}
+.numberof {
+  color: var(--dark); /*-- sets color to almost white --*/
+  font-size: 12px; /*-- sets font size --*/
+  padding: 8px 12px; /*-- sets numberof padding --*/
+  position: absolute; /*-- positions numberof text absolutely--*/
+  top: 0; /*-- sets position hard to the top--*/
+}
+.text-center {
+  display: flex;
+}
+.indicator {
+  cursor:pointer; /*-- changes hover cursor to the hand --*/
+  height: auto; /*-- sets height of pics --*/
+  width: 25%; /*-- sets width of pics --*/
+  margin: 0 2px; /*-- adds margin between pics --*/
+  background-color: #bbb; /*-- sets background color to light gray --*/
+  display: inline-block; /*-- displays in a horizontal line --*/
+  transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
+  opacity: .5;
+}
+.indicator img {
+  width: 100% !important; /*-- small images fill available space --*/
+}
+.active, .indicator:hover {
+  opacity: 1; /*-- makes fully visible when hovered  --*/
 }
 .hero {
   padding: 4rem 0; /*-- top and bottom padding for the container --*/
@@ -113,6 +183,14 @@ main {
 }
 @media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
   .grid-cont {grid-template-columns: repeat(4, 1fr);}
+}
+@media screen and (max-width: 768px) {
+  .nav-wrap {
+    display: none;
+  }
+  a#trigram {
+    display: inherit;
+  }
 }
 .card { /*-- selects .card elements --*/
   padding: 2%; /*-- a little bit of flexible space inside the card --*/

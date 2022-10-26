@@ -3,15 +3,17 @@ function sampleFunction() {
   alert("You clicked the button");
 }
 // Mobile Navigaton Toggle
-function navToggle() { // creates a new function named navToggle
-  var x = document.getElementById("nav-links"); // creates a variable set to #main-nav
-    if (x.className === "top-nav") { // if #main-nav has a class of .topnav,
-    x.className += " responsive";   // then add a new class
-  } else {                          // if it doesn't,
-    x.className = "top-nav";         // set class to .topnav
-  } //closes if-else
-} //closes function
-
+function navToggle() {
+  let siteNav = document.getElementById('site-nav');
+  let trigram = document.getElementById('trigram');
+  if (siteNav.className === 'nav-wrap') {
+    siteNav.classList.add('mobile');
+    trigram.classList.add('tri-mobile');
+  } else {
+    siteNav.classList = ('nav-wrap');
+    trigram.classList = ('nav-link');
+  }
+}
 // Slideshow Functions
 var slideIndex = 1; // creates a new variable, names it slideIndex, and sets it = to 1
 
