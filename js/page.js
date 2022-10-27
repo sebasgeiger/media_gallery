@@ -43,3 +43,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   indicator[slideIndex-1].className += " active"; 
 }
+
