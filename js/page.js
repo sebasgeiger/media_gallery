@@ -14,6 +14,7 @@ function navToggle() {
     trigram.classList = ('nav-link');
   }
 }
+
 // Slideshow Functions
 var slideIndex = 1; // creates a new variable, names it slideIndex, and sets it = to 1
 

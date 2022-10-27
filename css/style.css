@@ -192,12 +192,9 @@ main {
   .grid-cont {grid-template-columns: repeat(2, 1fr);}
 }
 @media screen and (min-width: 768px) { /*-- still two equal columns --*/
-  .grid-cont {grid-template-columns: repeat(2, 1fr);}
-}
-@media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
   .grid-cont {grid-template-columns: repeat(3, 1fr);}
 }
-@media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
+@media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
   .grid-cont {grid-template-columns: repeat(4, 1fr);}
 }
 @media screen and (max-width: 768px) {
@@ -209,25 +206,28 @@ main {
   }
 }
 .card { /*-- selects .card elements --*/
-  padding: 2%; /*-- a little bit of flexible space inside the card --*/
-  display: flex; /*-- card is a flex container --*/
-  flex-direction: column; /*-- flow is downward --*/
-  border-radius: 8px; /*-- curved edges --*/
-  border: 2px solid var(--dkmid); /*-- dashed border --*/
-  background-color: var(--light); /*-- a little bit of light color --*/
+  padding: 2%; 
+  display: flex; 
+  flex-direction: column; 
+  border-radius: 8px; 
+  border: 2px solid var(--dkmid); 
+  background-color: var(--light); 
 }
-.card img { /*-- selects image children of .card --*/
-  width: 100%; /*-- full width of container --*/
-  height: auto; /*-- maintain aspect ratio --*/
-  max-height: 320px; /*-- can't be too tall --*/
-  border-radius: 8px 8px 0 0; /*-- curved corners, but just on the top --*/
+.card img { 
+  width: 100%; 
+  height: auto; 
+  max-height: 320px; 
+  border-radius: 8px 8px 0 0; 
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--ltmid)
 }
-.card button { /*-- selects button children of .card elements --*/
-  width: 30%; /*-- 1/3rd width of parent (the .card) --*/
-  min-width: 6rem; /*-- can't be too narrow --*/
-  margin: 2rem auto; /*-- centered it --*/
-  padding: 1rem 2rem; /*-- makes space inside the button --*/
-  cursor: pointer; /*-- changes the mouse cursor from arrow to pointer --*/
+
+.card button { 
+  width: 30%; 
+  min-width: 6rem; 
+  margin: 2rem auto; 
+  padding: 1rem 2rem;
+  cursor: pointer; 
   transition: all 0.5s ease-in 0s;
   color: var(--dark);
   background: var(--light);
@@ -246,18 +246,18 @@ main {
   background: var(--dark);
 }
 
-footer { /*-- just some footer styles, nothing weird --*/
-  margin-top: 2rem; /*-- adds space above --*/
-  background-color: var(--ltmid); /*-- light mid color --*/
-  padding: 1rem 2rem; /*-- inside space to match the nav --*/
-  display: flex; /*-- might as well --*/
-  height: 6rem; /*-- fixed height  --*/
-  justify-content: space-between; /*-- horizontal center --*/
-  align-items: center; /*-- vertical center --*/
+footer { 
+  margin-top: 2rem; 
+  background-color: var(--ltmid); 
+  padding: 1rem 2rem; 
+  display: flex; 
+  height: 6rem; 
+  justify-content: space-between; 
+  align-items: center; 
   border-top: 0.25rem solid var(--light);
 }
-footer p { /*-- targets the footer text --*/
-  width: 100%; /*-- p elements are full width of the container --*/
-  text-align: center; /*-- centers the text --*/
-  font-weight: 500; /*-- mid-weight font --*/
+footer p { 
+  width: 100%; 
+  text-align: center; 
+  font-weight: 500; 
 }
