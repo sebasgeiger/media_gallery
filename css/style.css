@@ -75,6 +75,14 @@ a#trigram::before {
 a#trigram.tri-mobile::before {
   content: '\00D7'
 }
+@media screen and (max-width: 900px) {
+  .nav-wrap {
+    display: none;
+  }
+  a#trigram {
+    display: inherit;
+  }
+}
 main {
   padding: 1rem 2rem; 
 }
@@ -153,96 +161,198 @@ main {
 }
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade; /*-- webkit prefix  --*/
-  -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
-  animation-name: fade; /*-- defines which animation to use --*/
-  animation-duration: 1.5s; /*-- sets the duration --*/
+  -webkit-animation-name: fade; 
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade; 
+  animation-duration: 1.5s; 
 }
-@-webkit-keyframes fade { /*-- webkit prefix --*/
+@-webkit-keyframes fade { 
   from {opacity: .4}
   to {opacity: 1}
 }
-@keyframes fade { /*-- sets "fade" animation properties --*/
-  from {opacity: .4} /*-- sets start of animation --*/
-  to {opacity: 1} /*-- sets end of animation --*/
+@keyframes fade { 
+  from {opacity: .4} 
+  to {opacity: 1} 
 }
 .hero {
-  padding: 4rem 0; /*-- top and bottom padding for the container --*/
-  display: flex; /*-- declares a flex container --*/
-  flex-direction: column; /*-- direction downward --*/
-  justify-content: center; /*-- vertical center --*/
-  align-items: center; /*-- horizontal center --*/
-  background-color: var(--ltmid); /*-- light color --*/
-  width: 100vw; /*-- extra wide --*/
-  margin: 2rem 0 1rem -2rem; /*-- negative right margin compensates for extra width --*/
+  padding: 4rem 0; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: var(--ltmid); 
+  width: 100vw; 
+  margin: 2rem 0 1rem -2rem; 
   border-top: 0.25rem solid var(--light);
   border-bottom: 0.25rem solid var(--light);
 }
-.hero > * { /*-- targets all direct children of .hero --*/
-  margin: 0; /*-- zeroes their margins --*/
-  padding: 0; /*-- zeroes their padding --*/
+.hero > * { 
+  margin: 0; 
+  padding: 0; 
 }
-.grid-cont { /*-- styles the main grid container for media cards --*/
-  padding: 2rem 0; /*-- top and bottom padding for the grid container --*/
-  display: grid; /*-- declares this a grid container --*/
-  grid-gap: 2rem; /*-- 2rem top, right, bottom, and left gaps between items --*/
-  grid-template-columns: 1fr; /*-- by default, there is 1 column that's 1fr wide --*/
+/*-- ----------
+- GRID STYLES -
+---------------*/
+.main-grid {
+  margin-top: 3.5rem;
+  display: grid; 
+  grid-gap: 1.5rem; 
+  grid-template-columns: 1fr; 
 }
-@media screen and (min-width: 550px) { /*-- at slightly larger size, there are two equal columns --*/
-  .grid-cont {grid-template-columns: repeat(2, 1fr);}
+/*-- grid media queries--*/
+@media screen and (min-width: 550px) { 
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(2, 1fr);}  
 }
-@media screen and (min-width: 768px) { /*-- still two equal columns --*/
-  .grid-cont {grid-template-columns: repeat(3, 1fr);}
+@media screen and (min-width: 768px) {
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(3, 1fr);} 
 }
-@media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
-  .grid-cont {grid-template-columns: repeat(4, 1fr);}
+@media screen and (min-width: 990px) {
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(4, 1fr);} 
 }
-@media screen and (max-width: 768px) {
-  .nav-wrap {
-    display: none;
-  }
-  a#trigram {
-    display: inherit;
-  }
+@media screen and (min-width: 1280px) {
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(4, 1fr);} 
 }
-.card { /*-- selects .card elements --*/
-  padding: 2%; 
-  display: flex; 
-  flex-direction: column; 
-  border-radius: 8px; 
-  border: 2px solid var(--dkmid); 
-  background-color: var(--light); 
-}
-.card img { 
-  width: 100%; 
-  height: auto; 
-  max-height: 320px; 
-  border-radius: 8px 8px 0 0; 
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--ltmid)
-}
-.card button { 
-  width: 30%; 
-  min-width: 6rem; 
-  margin: 2rem auto; 
-  padding: 1rem 2rem;
-  cursor: pointer; 
-  transition: all 0.5s ease-in 0s;
-  color: var(--dark);
-  background: var(--light);
-}
-.card button:hover {
-  border-radius: 60px;
-  color: var(--light);
-  background: var(--dark);
-}
-.button--dark {
+/*-- media card styles -- */
+.main-grid-item {
+  border-radius: 4px; 
+  padding: .5em; 
+  background-color: var(--light);
   border: 2px solid var(--dark);
+}
+.thumb {
+  padding-bottom: 56%; 
+  background-size: cover; 
+  background-position: center center; 
+  border-radius: 4px 4px 0 0; 
+}
+/*-- Card Backgrounds --*/
+.one .thumb {background-image: url('https://picsum.photos/id/1038/480/320');}
+.two .thumb {background-image: url('https://picsum.photos/id/1015/480/320');}
+.three .thumb {background-image: url('https://picsum.photos/id/1041/480/320');}
+.four .thumb {background-image: url('https://picsum.photos/id/1053/480/320');}
+.five .thumb {background-image: url('https://picsum.photos/id/1061/480/320');}
+.six .thumb {background-image: url('https://picsum.photos/id/124/480/320');}
+.seven .thumb {background-image: url('https://picsum.photos/id/1001/480/320');}
+.eight .thumb {background-image: url('https://picsum.photos/id/1019/480/320');}
+.nine .thumb {background-image: url('https://picsum.photos/id/130/480/320');}
+.ten .thumb {background-image: url('https://picsum.photos/id/1005/480/320');}
+.eleven .thumb {background-image: url('https://picsum.photos/id/1050/480/320');}
+.twelve .thumb {background-image: url('https://picsum.photos/id/100/480/320');}
+/*----*/
+.card-content {
+  padding: 0 .5em .7em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.card-title {
+  margin: 1rem 0 0 0;
+  text-transform: uppercase; 
+  align-self: flex-start; 
   color: var(--dark);
 }
-.button--dark {
-  border-color: var(--ltmid);
+.card-text {
+  font-size: .80em;
+  line-height: 1.2;
+  align-self: flex-start;
+  color: var(--dark);
+}
+.btn {  
+  font-family: Arial, Helvetica, sans-serif;  
+  text-transform: uppercase;
+}  
+.btn:hover .btn-slide-show-text1 {  
+  margin-left: 65px;
+}  
+.btn-rect-to-round {  
+  height: 45px;  
+  width: 135px;  
+  font-size: 16px;  
+  font-weight: 600;  
+  background: transparent;  
+  cursor: pointer;  
+  transition: all 0.35s ease-in 0s;
+}  
+.btn-rect-to-round:hover {  
+  border-radius: 60px;  
+  color: var(--light) !important;
+}  
+.btn-rect-to-round--black {  
+  border: 2px solid var(--ltmid);  
+  color: var(--dark) !important;
+}  
+.btn-rect-to-round--black:hover {  
+  border-color: var(--ltmid);  
   background: var(--dark);
+}
+/*-- Modal Styles --*/
+/* The Modal (background) */
+.modal {
+   display: none;/*-- hidden by default --*/
+   position: fixed; /*-- doesn't move on the screen --*/
+   z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
+   left: 0; /*-- positions at zero pixels from the left --*/
+   top: 0; /*-- positions at zero pixels from the top --*/
+   width: 100%; /*-- fills the space --*/
+   height: 100%; /*-- fills the space --*/
+   overflow: auto; /*-- handles overflow as normal. --*/
+   background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+}
+.modal-content {
+   background-color: var(--light);
+   color: var(--dark);
+   border: 2px solid var(--dark);
+   margin: 1rem auto;
+   padding: 1em;
+   width: 92%;
+   border-radius: 4px;
+   animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+}
+@keyframes fadein {
+  from{transform:scale(.1);} /*-- modal grows from very small to full size--*/
+}
+.close {
+   color: var(--dark);
+   font-size: 2.5em;
+   font-weight: bold;
+   position: absolute; /*-- always at the top right of the modal --*/
+   top: 5px;
+   right: 4.25%;
+   transition: all .2s ease-in;
+   text-shadow: 2px 2px 5px #FAFAFA,
+               -2px -2px 5px #FAFAFA,
+               2px -2px 5px #FAFAFA,
+               -2px 2px 5px #FAFAFA;
+}
+.close:hover,
+.close:focus {
+   color: var(--ltmid);
+   text-decoration: none;
+   cursor: pointer;
+}
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr; /*-- default modal grid (for mobile screens)--*/
+  grid-gap: 2em;
+}
+.eg-text {
+  align-self: center;
+}
+.eg-text h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+.modal-body img {
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1280px) { /*-- better modal display on largest screens --*/
+  .modal-body {grid-template-columns: 7fr 5fr;}
 }
 footer { 
   margin-top: 2rem; 

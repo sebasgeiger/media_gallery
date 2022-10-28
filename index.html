@@ -58,82 +58,247 @@
       <h2>Images from <em>Lorem Picsum</em></h2>
       <p>Visit <a href="https://picsum.photos/">that site</a> to learn how to use them.</p>
     </section>
-    <section class="grid-cont">
-      <article class="card">
-        <img src="https://picsum.photos/id/1038/480/320" alt="alt-text reads . . .">
-        <h4>Ship in Waves</h4>
-        <p>Small fishing boat floating on the wavy sea. You can see the icey mountains in the background.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1015/480/320" alt="alt-text reads . . .">
-        <h4>View of River</h4>
-        <p>View from the top of a cliff looking down at a bright blue river with a clear blue sky.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1041/480/320" alt="alt-text reads . . .">
-        <h4>Crashing Wave</h4>
-        <p>Clear blue wave crashing down onto a beach under a cloudy overcast in the evening.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1053/480/320" alt="alt-text reads . . .">
-        <h4>White Capped Sea</h4>
-        <p>Close up view of a very foamy ocean with water that is green and white flowing in different directions.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1061/480/320" alt="alt-text reads . . .">
-        <h4>Cliff View</h4>
-        <p>THis view from the top of a beach-side cliff looks out into the open sea. You can see people walking on the beach.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/124/480/320" alt="alt-text reads . . .">
-        <h4>Empty Boat</h4>
-        <p>This boat sits in shallow green water with no land or other boats in sight. You can see dark patches in the water.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1001/480/320" alt="alt-text reads . . .">
-        <h4>Walk on the Beach</h4>
-        <p>This dad is carrying his son through the sand right along the water and grassy beach. </p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1019/480/320" alt="alt-text reads . . .">
-        <h4>Dark Storm</h4>
-        <p>This image shows a dark beach that looks almost black with a small amount of light coming through the clouds.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/130/480/320" alt="alt-text reads . . .">
-        <h4>Seagull Soaring</h4>
-        <p>This black and white image shows a seagull flying over the ocean with its wings out wide.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1005/480/320" alt="alt-text reads . . .">
-        <h4>Enjoying the View</h4>
-        <p>This man looks out into the ocean as the sun sets. The wind blowing back at him.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/1050/480/320" alt="alt-text reads . . .">
-        <h4>Inlet Rocks</h4>
-        <p>View looking inland to large rocky cliffs that sit on the edge of the sea. THe waves crashing onto the rocks.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="https://picsum.photos/id/100/480/320" alt="alt-text reads . . .">
-        <h4>Beach Vacation</h4>
-        <p>Shows a sunny day at a popular beach with numerous people in the water under lifeguard supervision.</p>
-        <button class="button--dark" onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <!--
-        add more article.cards inside this section
-      -->
+    <section class="main-grid">
+      <div class="main-grid-item one">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Ship in Waves</h4>
+          <p class="card-text">Small fishing boat floating on the wavy sea. You can see the icey mountains in the background.</p>
+          <button data-modal="#09" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1038/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Ship in Waves</h3>
+  						<p>Small fishing boat floating on the wavy sea. You can see the icey mountains in the background.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item two">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">View of River</h4>
+          <p class="card-text">View from the top of a rocky cliff covered in moss looking down at a bright blue river with a clear blue sky.</p>
+          <button data-modal="#24" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="24" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1015/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>View of River</h3>
+  						<p>View from the top of a rocky cliff covered in moss looking down at a bright blue river with a clear blue sky.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item three">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Crashing Wave</h4>
+          <p class="card-text">Clear blue wave beginning to tip and crash down onto a beach under a cloudy overcast in the evening.</p>
+          <button data-modal="#35" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="35" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1041/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Crashing Wave</h3>
+  						<p>Clear blue wave beginning to tip and crash down onto a beach under a cloudy overcast in the evening.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item four">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">White Capped Sea</h4>
+          <p class="card-text">Close up view of a very foamy ocean with water that is green and white flowing in different directions.</p>
+          <button data-modal="#44" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="44" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1053/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>White Capped Sea</h3>
+  						<p>Close up view of a very foamy ocean with water that is green and white flowing in different directions.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item five">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Cliff View</h4>
+          <p class="card-text">This view from the top of a beach-side cliff looks out into the open sea. You can see people walking on the beach.</p>
+          <button data-modal="#54" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="54" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1061/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Cliff View</h3>
+  						<p>This view from the top of a beach-side cliff looks out into the open sea. You can see people walking on the beach.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item six">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Empty Boat</h4>
+          <p class="card-text">This boat sits in shallow green water with no land or other boats in sight. You can see dark patches in the water.</p>
+          <button data-modal="#59" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="59" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/124/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Empty Boat</h3>
+  						<p>This boat sits in shallow green water with no land or other boats in sight. You can see dark patches in the water.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item seven">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Walk on the Beach</h4>
+          <p class="card-text">This dad is enjoying some time with his family carrying his son through the sand right along the water and grassy beach.</p>
+          <button data-modal="#71" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="71" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1001/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Walk on the Beach</h3>
+  						<p>This dad is enjoying some time with his family carrying his son through the sand right along the water and grassy beach.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item eight">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Dark Storm</h4>
+          <p class="card-text">This image shows a dark beach that looks almost black with a small amount of light coming through the clouds.</p>
+          <button data-modal="#32" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="32" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1019/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Dark Storm</h3>
+  						<p>This image shows a dark beach that looks almost black with a small amount of light coming through the clouds.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item nine">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Seagull Soaring</h4>
+          <p class="card-text">This black and white image shows a seagull flying over the ocean in the white clouds with its wings out wide.</p>
+          <button data-modal="#19" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="19" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/130/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Seagull Soaring</h3>
+  						<p>This black and white image shows a seagull flying over the ocean in the white clouds with its wings out wide.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item ten">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Enjoying the View</h4>
+          <p class="card-text">This man looks out into the ocean as the sun sets. The wind blowing back at him as he is wrapped up on a chilly night.</p>
+          <button data-modal="#06" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="06" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1005/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Enjoying the View</h3>
+  						<p>This man looks out into the ocean as the sun sets. The wind blowing back at him as he is wrapped up on a chilly night.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item eleven">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Inlet Rocks</h4>
+          <p class="card-text">View looking inland to large rocky cliffs that sit on the edge of the sea. The waves crashing onto the rocks.</p>
+          <button data-modal="#23" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="23" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/1050/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Inlet Rocks</h3>
+  						<p>View looking inland to large rocky cliffs that sit on the edge of the sea. The waves crashing onto the rocks.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="main-grid-item twelve">
+        <div class="thumb"></div><hr />
+        <div class="card-content">
+          <h4 class="card-title">Beach Vacation</h4>
+          <p class="card-text">Shows a sunny day at a popular beach with numerous people in the water under lifeguard supervision.</p>
+          <button data-modal="#60" class="btn btn-rect-to-round btn-rect-to-round--black">View</button>
+        </div>
+      </div><!--end .main-grid-item -->
+      <div id="60" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="https://picsum.photos/id/100/480/320" alt="example" />
+  					<div class="eg-text">
+  						<h3>Beach Vacation</h3>
+  						<p>Shows a sunny day at a popular beach with numerous people in the water under lifeguard supervision.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
     </section>
   </main>
   <footer>
